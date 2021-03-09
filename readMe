@@ -1,4 +1,45 @@
-* Day 프로젝트를 하면서 학습한점 
+📖 Day 프로젝트를 하면서 학습한점 
 
 
-box-sizing 에대한이해 
+✔ box-sizing 에대한이해 
+
+
+✔ css 도형을 쉽게 다루는 방식 
+        clip-path 설정 사용 
+        https://bennettfeely.com/clippy/
+
+        + clipping은 벡터 패스-점과 점 사이의 곡선으로 이미지를 구현
+         masking은 래스터 이미지-Pixel 수에따른 해상도
+
+        참고)
+         https://shlee1353.github.io/2019/07/15/css-clip-mask/
+
+✔ 도형그림자 만드는방법 
+        :before 속성사용 
+    
+    대상::before{
+        background: radial-gradient(rgba(0,0,0,0.15),transparent);
+    }
+
+    *radial-gradient(+ex10) :원형 그라데이션 효과
+
+    대상:hover::before{
+        opacity: 0.8;
+        transform: scale(0.8);
+    }
+
+
+    * opacity vs rgba 차이점
+        -opacity 속성은 투명도를 지정했을 때 모든 자식 요소에 투명도 값이 상속됩니다.
+        -rgba로 지정하면 rgba를 선언한 요소에만 적용되며 상속되지 않습니다.
+
+✔ 도형내부 이미지 맞추기 
+
+        이미지 {
+            position: absolute;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
